@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  web:
+    restart: always
+    build: ./web
+    expose:
+      - "8000"
+    volumes:
+      - /usr/src/app/web/project/static
+    command: gunicorn -w 1 -b :8000 flask_gunicorn_embed:app
+
+
+  nginx:
+    restart: always
+    build: ./nginx
+    ports:
+      - "80:80"
+    volumes:
+      - /www/static
+    volumes_from:
+      - web
+    depends_on:
+      - web
+
