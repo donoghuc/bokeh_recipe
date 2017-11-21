@@ -64,7 +64,7 @@ bokeh_http.add_sockets(sockets)
 @app.route('/', methods=['GET'])
 def bkapp_page():
     # return(os.path.join(os.getcwd(), 'static'))
-    script = server_document('http://127.0.0.1:%d/bkapp' % port, relative_urls=True)
+    script = server_document('http://127.0.0.1:%d/bkapp' % port)
     return render_template("embed.html", script=script, template="Flask")
 
 def bk_worker():
