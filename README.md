@@ -25,7 +25,10 @@ I want to eliminate the specifics of my network and app details so I put togethe
 2. navigate to bokeh_recipe/web/project
 3. execute: gunicorn -w 1 flask_gunicorn_embed:app
 4. open 127.0.0.1:8000 in web browser
-  
+
+![works](screenshots/localhost_works.png?raw=true "working")
+
+
 __works great__
 
 
@@ -45,6 +48,10 @@ __works great__
 * docker ps (copy CONTAINER ID for bokehrecipe_nginx)
 * docker inspect [CONTAINER ID for bokehrecipe_nginx] | grep IPAddress
 5. Type the IP address found in step 3 into browser
+
+![find_ip](screenshots/find_ip.png?raw=true "find ip")
+
+![broke](screenshots/server_broken.png?raw=true "fbroke")
 
 # PLEASE HELP
  
