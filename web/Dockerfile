@@ -4,8 +4,8 @@
 FROM container-registry.oracle.com/os/oraclelinux:7
 
 # communicate through oracle proxy 
-ENV http_proxy=secret
-ENV https_proxy=secret
+# ENV http_proxy=secret
+# ENV https_proxy=secret
 
 
 # bzip2 required to decompress binary conda release

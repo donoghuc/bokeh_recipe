@@ -21,5 +21,5 @@ services:
     volumes_from:
       - web
     depends_on:
-- web
+      - web
 
