@@ -11,7 +11,7 @@ Download or clone repo and navigate to this directory (single_container).
 # as root
 docker build -f Dockerfile -t single_container .
 ```
-![build](screenshots/docker_build.png?raw=true "docker_build")
+![build](../screenshots/docker_build.png?raw=true "docker_build")
 
 start a terminal session in new container
 ```
@@ -26,7 +26,7 @@ now start gunicorn
 ```
 gunicorn -w 1 -b :8000 flask_gunicorn_embed:app
 ```
-![start](screenshots/start_container.png?raw=true "start")
+![start](../screenshots/start_container.png?raw=true "start")
 
 in a separate terminal (on host machine) find the IP address of the single_container container you are running
 ```
@@ -36,4 +36,4 @@ docker ps
 docker inspect [CONTIANER ID] | grep IPAddress
 ```
 
-![find](screenshots/find_ip_single.png?raw=true "find")
+![find](../screenshots/find_ip_single.png?raw=true "find")
